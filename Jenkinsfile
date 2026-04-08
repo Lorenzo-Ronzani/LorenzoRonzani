@@ -5,7 +5,6 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''
-                    cd Assessment2
                     npm install
                     npm run build
                 '''
@@ -15,7 +14,6 @@ pipeline {
         stage('Test') {
             steps {
                 sh '''
-                    cd Assessment2
                     npm test
                 '''
             }
